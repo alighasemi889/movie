@@ -1,0 +1,116 @@
+<!-- component -->
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>صفحه  ورود</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        /* Webfont: Yekan */
+@font-face {
+	font-family: 'Yekan';
+	src:	url('Yekan.eot'); /* IE9 Compat Modes */
+	src:	url('Yekan.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			url('Yekan.woff2') format('woff2'), /* Modern Browsers */
+			url('Yekan.woff') format('woff'), /* Modern Browsers */
+			url('Yekan.otf') format('opentype'), /* Open Type Font */	
+			url('Yekan.ttf') format('truetype'); /* Safari, Android, iOS */
+	font-weight: normal;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+	font-display: auto;
+}
+        body{
+          background-image: url("images/bg__login.jpg");
+       
+        }   
+  img.logo.signup {
+    border-radius: 10px;
+    width: 100px;
+    height: auto;
+    max-width: 100%;
+}
+
+a:hover{
+    /* color:#fff; */
+    text-decoration: none;
+}
+@media screen and (max-width:416px){
+    .text-gray-700,.mr-2{
+        display: none;
+    }
+    .text-sm {
+  
+  line-height: 1.25rem;
+}
+}
+    </style>
+</head>
+<body>
+    <div class="bg-black-200 w-full min-h-screen flex items-center justify-center">
+            <div class="w-full py-8">
+                <div class="flex items-center justify-center space-x-2">
+                    <img src="images/logo reneww - Copy.jpg" alt="logo__signup" class="logo signup" loading="lazy">
+                </div>
+                <div class="bg-white w-5/6 md:w-3/4 lg:w-2/3 xl:w-[500px] 2xl:w-[550px] mt-8 mx-auto px-16 py-8 rounded-lg shadow-2xl">
+
+                    <h2 class="text-center text-2xl font-bold tracking-wide text-gray-800"> ثبت نام</h2>
+                    <p class="text-center text-sm text-gray-600 mt-2">ثبت نام نکردم؟ <a href="signup.html" class="text-blue-600 hover:text-blue-700 " title="Sign In">ثبت نام کنید</a></p>
+
+                    <form onsubmit ="return verifyPassword()"  id="basic_form" class="my-8 text-sm">
+                        <div class="flex flex-col my-4">
+                            <label for="name" class="text-gray-700">نام</label>
+                            <input id="basic_name" required type="text" name="name" id="name" class="mt-2 p-2 border border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-300 rounded text-sm text-gray-900" placeholder="Enter your name">
+                        </div>
+
+                        <div class="flex flex-col my-4">
+                            <label for="email" class="text-gray-700">ادرس ایمیل</label>
+                            <input  required type="email" name="email" id="basic_email" class="mt-2 p-2 border border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-300 rounded text-sm text-gray-900" placeholder="Enter your email">
+                        </div>
+                        
+                  
+
+                        <div class="flex items-center">
+                            <input required type="checkbox" name="remember_me" id="remember_me" class="mr-2 focus:ring-0 rounded">
+                            <label for="remember_me" class="text-gray-700">شرایط <a href="#" class="">و </a> ظوابط <a href="#" class=" ">امنیتی را میپذیرم</a></label>
+                        </div>
+                    
+                        <div class="my-4 flex items-center justify-end space-x-4">
+                            <button class="bg-blue-600 hover:bg-blue-700 rounded-lg px-8 py-2 text-gray-100 hover:shadow-xl transition duration-150 uppercase">ثبت نام</button>
+                        </div>
+                    </form>
+                    
+              
+                </div>
+            </div>
+        </div>
+        <script>
+        function verifyPassword() {  
+            var pw = document.getElementById("pswd").value;  
+            //check empty password field  
+            if(pw == "") {  
+               document.getElementById("message").innerHTML = "**Fill the password please!";  
+               return false;  
+            }  
+             
+           //minimum password length validation  
+            if(pw.length < 8) {  
+               document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";  
+               return false;  
+            }  
+            
+          //maximum length of password validation  
+            if(pw.length > 15) {  
+               document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";  
+               return false;  
+            } else {  
+               alert("Password is correct");  
+            }  
+          }  
+          </script>  
+   
+</body>
+</html>

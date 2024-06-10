@@ -1,0 +1,199 @@
+.slideshow { 
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+  
+    .slideshow-inner { 
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .slides { 
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  
+    .slide { 
+      display: none;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+  
+      &.is-active {
+        display: block;
+      }
+  
+      &.is-loaded{
+        opacity: 1;
+      }
+  
+      .caption { 
+        padding: 0 100px;
+      }
+  
+      .image-container { 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        z-index: 1;
+        background-size: cover;
+        image-rendering: optimizeQuality;
+  
+        &::before { 
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0,0,0,0.5);
+        }
+      }
+  
+      .image {
+        width: 100%;
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+      }
+  
+      &-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .title { 
+        margin: 0 auto 15px;
+        max-width: 1000px;
+        font: 300 50px/1.2 "Oswald", sans-serif;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+      }
+  
+      .text {
+        margin: 0 auto;
+        max-width: 1000px;
+        font-size: 18px;
+        line-height: 1.4;
+      }
+  
+      .btn {
+        margin: 15px 0 0;
+        border-color: #fff;
+  
+        &::before {
+          background:#fff
+        }
+      }
+    }
+  
+    .pagination { 
+      position: absolute;
+      bottom: 35px;
+      left: 0;
+      width: 100%;
+      height: 12px;
+      cursor: default;
+      z-index: 2;
+      text-align: center;
+  
+      .item { 
+        display: inline-block;
+        padding: 15px 5px;
+        position: relative;
+        width: 46px;
+        height: 32px;
+        cursor: pointer;
+        text-indent: -999em;
+        z-index: 1;
+  
+        + .page {
+          margin-left: -2px;
+        }
+  
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 15px;
+          left: 5px;
+          width: 36px;
+          height: 2px;
+          background: rgba(255, 255, 255, 0.5);
+          transition: background 0.2s ease;
+        }
+  
+        &::after {
+          width: 0;
+          background: #fff;
+          z-index: 2;
+          transition: width 0.2s ease;
+        }
+  
+        &:hover::before,
+        &.is-active::before {
+          background-color: #fff;
+        }
+      }
+    }
+  
+    .arrows {
+      .arrow {
+        margin: -33px 0 0;padding: 20px;position: absolute;top: 50%;cursor: pointer;z-index: 3;
+      }
+  
+      .prev {
+        left: 30px;
+  
+        &:hover .svg {
+          left: -10px;
+        }
+      }
+  
+      .next {
+        right: 30px;
+  
+        &:hover .svg {
+          left: 10px;
+        }
+      }
+  
+      .svg {
+        position: relative;
+        left: 0;
+        width: 14px;
+        height: 26px;
+        fill: #fff;
+        transition: left 0.2s ease;
+      }
+    }
+  }
+  

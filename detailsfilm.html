@@ -1,0 +1,468 @@
+  <!DOCTYPE html>
+  <html lang="fa">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>جزعیات</title>
+      <style>
+              body{
+                  background-color: #000;
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+              }
+              .full__header{
+                  width: 100%;
+              }
+                  img {
+                      height: 416px;
+                      display: block;
+                      max-width: 100%;
+                      }
+              .first {
+              
+                          position: relative;
+                          opacity: 0.9;
+              }
+              img {
+                  height: 416px;
+                  display: block;
+                  max-width: 100%;
+              }
+              .golzar__pic__cover {
+                                  position: absolute;
+                                  top: 53px;
+                                  right: 3px;
+                                  width: 251px;
+                                  height: 326px;
+  }
+  .general__small {
+    background-color: rgb(246, 184, 40);
+    display: inline-block;
+    max-width: 164px;
+    border-radius: 10px;
+    max-width: 150px;
+    width: 113px;
+    text-align: center;
+    line-height: 1.5;
+    background: green;
+  }
+  .dark {
+    background: #fd9209;
+    color: #fff;
+    fill: rgb(41, 41, 41);
+    border-radius: 6px;
+  }
+  .span.border__gray {
+    border-radius: 10px;
+    background: gray;
+      background-color: gray;
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+    line-height: 1.5;
+    padding: 4px;
+    color: #fff;
+    background-color: #4d4d4d !important;
+  }
+            
+  #buy {
+    /* background: green;
+    border: none;
+    outline: none;
+    width: 50px; */
+    width: 109px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 20px;
+    background-color: #17924e;
+    border: none;
+    outline: none;
+    transition: .4s ease;
+  }
+  .wrapper__right {
+    display: flex;
+    justify-content: flex-start;
+    gap: 105px;
+    line-height: 1.8;
+    flex-direction: row-reverse;
+    margin: -400px 90px 0;
+      margin-top: -400px;
+      margin-right: 90px;
+      margin-bottom: 0px;
+      margin-left: 90px;
+    z-index: 999;
+    position: relative;
+    z-index: 999;
+    color: #fff;
+  }
+  
+  .wrapper__right {
+    /* display: flex; */
+    justify-content: flex-start;
+    /* gap: 105px; */
+    line-height: 1.8;
+    flex-direction: row-reverse;
+    /* margin: -400px 90px 0; */
+    margin-top: -407px;
+    margin-right: 99px;
+    margin-bottom: 0px;
+    /* margin-left: 90px; */
+    /* z-index: 999; */
+    /* position: relative; */
+    /* z-index: 999; */
+    color: #fff;
+    display: flex;
+    gap: 310px;
+    /* margin-left: -39px; */
+    position: relative;
+    left: 10px;
+    z-index: 999;
+    overflow: hidden;
+    /* left: 10px; */
+    position: relative;
+    left: 10px;
+    right: 10px;
+    margin-left: 10px;
+  }
+  .btn__wrapper {
+    /* display: flex; */
+    gap: 10px;
+    /* display: grid; */
+    display: flex;
+    margin: 10px;
+    justify-content: space-evenly;
+    /* margin-left: -53px; */
+    margin-left: -16px;
+    /* justify-content: space-between; */
+  }
+  .container__text {
+    position: relative;
+    top: -7px;
+    /* left: 58px; */
+    /* left: 46px; */
+    left: 149px;
+  }
+  /* slider */
+  .slider__container {
+      cursor: grab;
+      display: flex;
+      overflow: hidden;
+      scroll-behavior: smooth;
+      }
+      
+      .slider__container.dragging {
+      scroll-behavior: auto;
+      cursor: grabbing;
+      }
+      
+      .slider__item {
+      padding: 16px 8px;
+      flex: 0 0 auto;
+      width: calc(100% / 5);
+      }
+      
+      .slider__container[data-step="4"] .slider__item {
+      width: calc(100% / 6);
+      }
+      
+      .slider__container[data-step="3"] .slider__item {
+      width: calc(100% / 3);
+      }
+      
+      .slider__container[data-step="2"] .slider__item {
+      width: calc(100% / 2);
+      }
+      
+      .slider__container[data-step="1"] .slider__item {
+      width: calc(100% / 1);
+      }
+      
+      @media screen and (max-width: 1024px) {
+      .slider__item,
+      .slider__container[data-step="4"] .slider__item {
+        width: calc(100% / 3);
+      }
+      }
+      
+      @media screen and (max-width: 768px) {
+      .slider__item,
+      .slider__container[data-step="4"] .slider__item,
+      .slider__container[data-step="3"] .slider__item {
+        width: calc(100% / 2);
+      }
+      }
+      @media screen and (max-width: 480px) {
+      .slider__item,
+      .slider__container[data-step="4"] .slider__item,
+      .slider__container[data-step="3"] .slider__item,
+      .slider__container[data-step="2"] .slider__item {
+        width: calc(100% / 1);
+      }
+      }
+      
+      .slider__control {
+      font-size: 16px;
+      border: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      color: #000;
+      background: #fff;
+      cursor: pointer;
+      opacity: .5;
+      transition: all .3s;
+      }
+      
+      .slider__control.prev {
+      left: 16px;
+      }
+      
+      .slider__control.next {
+      right: 16px;
+      }
+      .slider {
+    position: relative;
+    background: #0000;
+    }
+    .actor__bio {
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    padding: 17px;
+    margin: 0 40px 0 0;
+    font-weight: 400;
+    font-size: 23px;
+  }
+  .actor__radios {
+    border-radius: 50%;
+    height: 188px;
+    width: 200px;
+  }
+      .full.opacity__full {
+    opacity: 50%;
+  }
+  .slider__text {
+    color: azure;
+    text-align: center;
+    /* background: color-mix; */
+    display: flex;
+    justify-content: flex-end;
+    padding: 34px;
+    color: yellow;
+  }
+
+  .div__on__the__im {
+    background: url(images/play__detail.png);
+    background-repeat: no-repeat;
+    width: 93px;
+    background-size: contain;
+    position: relative;
+    z-index: 999;
+    top: 153px;
+    /* top: 123px; */
+    left: -75px;
+    display: inline-flex;
+    height: 131px;
+  }
+  img {
+    height: 378px;
+    display: block;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+      </style>
+  </head>
+  <body>
+      <div class="wrapper">
+          <div class="full__image">
+            <div class="first">
+              <img class="full opacity__full" src="images/shab.jpg" alt="">
+              
+          
+            </div>
+              
+          
+          </div>
+        
+      </div>
+      <div class="wrapper__right">
+        <div class="container__image">
+          <img  class="golzar__pic__cover no__opacity stylish" src="images/shab2.jpg" alt="">
+          <div class="div__on__the__im"></div>
+        </div>
+        
+          <div class="container__text">
+              <h1>  فیلم شبی که ماه کامل شد </h1>
+              <h2>When the Moon Was Full</h2>
+              <div class="general__small">
+                  <span>10 /4.3</span>
+                  <span class="dark">IMDB</span>
+              </div>
+              <div class="wrapper__upper__age">
+                <h3>مناسب برای بالای 18 سال </h3>
+              </div>
+              <!-- <h3>مناسب برای بالای 18 سال </h3> -->
+              <h4>کارگردان: نرگس ابیار</h4>
+              <h4>HD دو ساعت و 11 دقیقه - محصول ایران - 1397 - کیفیت  </h4>
+              <div class="btn__wrapper">
+                  <div class="span border__gray">کمدی</div>
+                  <div class="span border__gray">درام</div>
+                  <button id="buy" class="green">خرید اشتراک</button>
+              </div>
+          
+          </div>
+      
+      </div>
+      <div class="c__suggest">
+        <h1 class="slider__text">
+          فیلم های مربوطه
+        </h1>
+      </div>
+      <section class="slider">
+          <button class="slider__control prev"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="slider__control next"><i class="fa-solid fa-chevron-right"></i></button>
+          <div class="slider__container" data-multislide="false" data-step="4">
+            <div class="slider__item">
+              <img src="images/kar.webp" alt="" width="100%">
+            </div>
+            <div class="slider__item">
+                <img src="central__particular_image/erfagh.jpg" alt="" width="100%">
+            </div>
+            <div class="slider__item">
+                <img src="images/sham.webp" alt="" width="100%">
+            </div>
+            <div class="slider__item">
+                <img src="images/metr.webp" alt="" width="100%">
+            </div>
+            <div class="slider__item">
+                <img src="images/mes.webp" alt="" width="100%">
+            </div>
+            <div class="slider__item">
+              <img src="images/mes.webp" alt="" width="100%">
+          </div>
+          <div class="slider__item">
+            <img src="images/mes.webp" alt="" width="100%">
+        </div>
+          
+          </div>
+        </section>
+        <div class="wrapper__slide">
+          <h3 class="actor__bio"> بازیگران فیلم  شبی که ماه کامل شد </h3>
+          <section class="slider">
+              <button class="slider__control prev"><i class="fa-solid fa-chevron-left"></i></button>
+              <button class="slider__control next"><i class="fa-solid fa-chevron-right"></i></button>
+              <div class="slider__container" data-multislide="false" data-step="4">
+                <div class="slider__item">
+                  <img class="actor__radios" src="images/el__shab.jpg" alt="" width="100%">
+                </div>
+                <div class="slider__item">
+                    <img  class="actor__radios" src="images/hootan.jpg" alt="" width="100%">
+                </div>
+                <div class="slider__item">
+                    <img  class="actor__radios" src="images/orafee.jpg" alt="" width="100%">
+                </div>
+                <div class="slider__item">
+                    <img  class="actor__radios" src="images/armin.jpg" alt="" width="100%">
+                </div>
+                <div class="slider__item">
+                    <img  class="actor__radios" src="images/pedram.jpg" alt="" width="100%">
+                </div>
+                <div class="slider__item">
+                    <img  class="actor__radios" src="images/shoomoon.jpg" alt="" width="100%">
+                </div>
+                <div class="slider__item">
+                    <img  class="actor__radios" src="images/ramezani.jpg" alt="" width="100%">
+                </div>
+              
+              </div>
+            </section>
+        </div>
+        <script>
+          const sliders = [...document.querySelectorAll(".slider__container")];
+      const sliderControlPrev = [...document.querySelectorAll(".slider__control.prev")];
+      const sliderControlNext = [...document.querySelectorAll(".slider__control.next")];
+      
+      sliders.forEach((slider, i) => {
+        let isDragStart = false,
+            isDragging = false,
+            isSlide = false,
+            prevPageX,
+            prevScrollLeft,
+            positionDiff;
+      
+        const sliderItem = slider.querySelector(".slider__item");
+        var isMultislide = (slider.dataset.multislide === 'true');
+      
+        sliderControlPrev[i].addEventListener('click', () => {
+          if (isSlide) return;
+          isSlide = true;
+          let slideWidth = isMultislide ? slider.clientWidth : sliderItem.clientWidth;
+          slider.scrollLeft += -slideWidth;
+          setTimeout(function(){ isSlide = false; }, 700);
+        });
+      
+        sliderControlNext[i].addEventListener('click', () => {
+          if (isSlide) return;
+          isSlide = true;
+          let slideWidth = isMultislide ? slider.clientWidth : sliderItem.clientWidth ;
+          slider.scrollLeft += slideWidth;
+          setTimeout(function(){ isSlide = false; }, 700);
+        });
+      
+        function autoSlide() {
+          if(slider.scrollLeft - (slider.scrollWidth - slider.clientWidth) > -1 || slider.scrollLeft <= 0) return;
+          positionDiff = Math.abs(positionDiff);
+          let slideWidth = isMultislide ? slider.clientWidth : sliderItem.clientWidth;
+          let valDifference = slideWidth - positionDiff;
+          if(slider.scrollLeft > prevScrollLeft) {
+              return slider.scrollLeft += positionDiff > slideWidth / 5 ? valDifference : -positionDiff;
+          }
+          slider.scrollLeft -= positionDiff > slideWidth / 5 ? valDifference : -positionDiff;
+        }
+      
+        function dragStart(e) {
+          if (isSlide) return;
+          isSlide = true;
+          isDragStart = true;
+          prevPageX = e.pageX || e.touches[0].pageX;
+          prevScrollLeft = slider.scrollLeft;
+          setTimeout(function(){ isSlide = false; }, 700);
+        }
+      
+        function dragging(e) {
+          if(!isDragStart) return;
+          e.preventDefault();
+          isDragging = true;
+          slider.classList.add("dragging");
+          positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+          slider.scrollLeft = prevScrollLeft - positionDiff;
+        }
+      
+        function dragStop() {
+          isDragStart = false;
+          slider.classList.remove("dragging");
+          if(!isDragging) return;
+          isDragging = false;
+          autoSlide();
+        }
+      
+        addEventListener("resize", autoSlide);
+        slider.addEventListener("mousedown", dragStart);
+        slider.addEventListener("touchstart", dragStart);
+        slider.addEventListener("mousemove", dragging);
+        slider.addEventListener("touchmove", dragging);
+        slider.addEventListener("mouseup", dragStop);
+        slider.addEventListener("touchend", dragStop);
+        slider.addEventListener("mouseleave", dragStop);
+      });
+      
+        </script>
+        
+  </body>
+  </html>

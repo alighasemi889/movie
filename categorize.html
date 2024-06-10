@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خوش امدید</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
+
+    <style>
+            body {
+      background-color: white;
+      color: black;
+      font-size: 25px;
+    }
+    .new__dark {
+  background: royalblue;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+    .dark-mode .bg-gray-100{
+        background-color: #000;
+    }
+    .dark-mode .bg-white{
+        background-color: #000;
+    }
+        img, video {
+        max-width: 100%;
+        /* height: auto; */
+        width: 236px;
+        height: 130px;
+        border-radius: 23px;
+}
+.full__width {
+  width: 102%;
+  height: 215px;
+  max-width: 100%;
+}
+.hover\:text-gray-800:hover {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+  color: #fff;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+}
+.wrapper__all__general {
+  display: grid;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 21px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
+  margin: 0;
+  text-align: center;
+}
+
+/* light and dark */
+/* The switch - the box around the slider */
+/* Default */
+/* The switch - the box around the slider */
+#theme-toggle-button {
+  font-size: 11px;
+  position: relative;
+  display: inline-block;
+  width: 8em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Hide default HTML checkbox */
+#toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#container,
+#patches,
+#stars,
+#button,
+#sun,
+#moon,
+#cloud {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.25s;
+}
+
+/* night sky background */
+#toggle:checked + svg #container {
+  fill: #2b4360;
+}
+
+/* move button to right when checked */
+#toggle:checked + svg #button {
+  transform: translate(28px, 2.333px);
+}
+
+/* show/hide sun and moon based on checkbox state */
+#sun {
+  opacity: 1;
+}
+
+#toggle:checked + svg #sun {
+  opacity: 0;
+}
+
+#moon {
+  opacity: 0;
+}
+
+#toggle:checked + svg #moon {
+  opacity: 1;
+}
+
+/* show or hide background items on checkbox state */
+#cloud {
+  opacity: 1;
+}
+
+#toggle:checked + svg #cloud {
+  opacity: 0;
+}
+
+#stars {
+  opacity: 0;
+}
+
+#toggle:checked + svg #stars {
+  opacity: 1;
+}
+.full__width:hover {
+  border-radius: 10px;
+  animation: .4s ease-in-out;
+}
+.dark-mode .bg-white {
+  background-color: #000;
+  position: fixed;
+  height: 100%;
+  background-color: #010B10;
+}
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  position: fixed;
+  height: 100%;
+  right: 0;
+}
+.dark-mode main {
+  /* background: #f7f7f7; */
+  background: #f2f2f2;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  direction: rtl;
+}
+.toggle {
+  background-color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 50px 20px rgba(0, 0, 0, .1);
+  line-height: 1;
+}
+
+.input {
+  display: none;
+}
+
+.icon {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  transition: transform 500ms;
+}
+
+.icon--moon {
+  transition-delay: 200ms;
+}
+
+.icon--sun {
+  transform: scale(0);
+}
+
+#switch:checked + .icon--moon {
+  transform: rotate(360deg) scale(0);
+}
+
+#switch:checked ~ .icon--sun {
+  transition-delay: 200ms;
+  transform: scale(1) rotate(360deg);
+}
+/* switch settings 👇 */
+
+.ui-switch {
+  /* switch */
+  --switch-bg: rgb(135, 150, 165);
+  --switch-width: 48px;
+  --switch-height: 20px;
+  /* circle */
+  --circle-diameter: 32px;
+  --circle-bg: rgb(232, 89, 15);
+  --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
+}
+
+.ui-switch input {
+  display: none;
+}
+
+.slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: var(--switch-width);
+  height: var(--switch-height);
+  background: var(--switch-bg);
+  border-radius: 999px;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.slider .circle {
+  top: calc(var(--circle-inset) * -1);
+  left: 0;
+  width: var(--circle-diameter);
+  height: var(--circle-diameter);
+  position: absolute;
+  background: var(--circle-bg);
+  border-radius: inherit;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTkuMzA1IDEuNjY3VjMuNzVoMS4zODlWMS42NjdoLTEuMzl6bS00LjcwNyAxLjk1bC0uOTgyLjk4Mkw1LjA5IDYuMDcybC45ODItLjk4Mi0xLjQ3My0xLjQ3M3ptMTAuODAyIDBMMTMuOTI3IDUuMDlsLjk4Mi45ODIgMS40NzMtMS40NzMtLjk4Mi0uOTgyek0xMCA1LjEzOWE0Ljg3MiA0Ljg3MiAwIDAwLTQuODYyIDQuODZBNC44NzIgNC44NzIgMCAwMDEwIDE0Ljg2MiA0Ljg3MiA0Ljg3MiAwIDAwMTQuODYgMTAgNC44NzIgNC44NzIgMCAwMDEwIDUuMTM5em0wIDEuMzg5QTMuNDYyIDMuNDYyIDAgMDExMy40NzEgMTBhMy40NjIgMy40NjIgMCAwMS0zLjQ3MyAzLjQ3MkEzLjQ2MiAzLjQ2MiAwIDAxNi41MjcgMTAgMy40NjIgMy40NjIgMCAwMTEwIDYuNTI4ek0xLjY2NSA5LjMwNXYxLjM5aDIuMDgzdi0xLjM5SDEuNjY2em0xNC41ODMgMHYxLjM5aDIuMDg0di0xLjM5aC0yLjA4NHpNNS4wOSAxMy45MjhMMy42MTYgMTUuNGwuOTgyLjk4MiAxLjQ3My0xLjQ3My0uOTgyLS45ODJ6bTkuODIgMGwtLjk4Mi45ODIgMS40NzMgMS40NzMuOTgyLS45ODItMS40NzMtMS40NzN6TTkuMzA1IDE2LjI1djIuMDgzaDEuMzg5VjE2LjI1aC0xLjM5eiIgLz4KPC9zdmc+");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -o-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+  ;
+}
+
+.slider .circle::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: inherit;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+  opacity: 0;
+}
+
+/* actions */
+
+.ui-switch input:checked+.slider .circle {
+  left: calc(100% - var(--circle-diameter));
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTQuMiAyLjVsLS43IDEuOC0xLjguNyAxLjguNy43IDEuOC42LTEuOEw2LjcgNWwtMS45LS43LS42LTEuOHptMTUgOC4zYTYuNyA2LjcgMCAxMS02LjYtNi42IDUuOCA1LjggMCAwMDYuNiA2LjZ6IiAvPgo8L3N2Zz4=");
+  background-color: rgb(0, 56, 146);
+}
+
+.ui-switch input:active+.slider .circle::before {
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+  opacity: 1;
+  width: 0;
+  height: 0;
+}
+img.zoom:hover{
+  transition: transform 2.5s ease 0s;
+  transform: scale(1.1);
+}
+/* responsive part */
+@media screen and (min-width:1369px) and (max-width:1561px){
+
+#not_visibile{
+    visibility: hidden;
+  }
+}
+@media screen and (min-width:2000px) and (max-width:2500px){
+ 
+  .wrapper__images{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width:2500px){
+  .wrapper__images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width:2015px){
+  .wrapper__images{
+    width: 1500px;
+    margin: 0 auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+  }
+}
+@media screen and (min-width:1302px) and (max-width:1380px){
+  /* #not_visibile{
+    visibility: hidden;
+  } */
+  .wrapper__images{
+    width: 70%;
+  }
+}
+@media screen and (min-width:1600px) and (max-width:1999px){
+  .wrapper__images{
+    margin: 0 auto;
+    position: relative;
+    width: 70%;
+  }
+  .full__width{
+    width: 100%;
+  }
+}
+@media screen and (min-width:1400px) and (max-width:1500px){
+  .wrapper__images{
+    /* width: 100px; */
+    width: 900px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+  }
+  .full__width{
+    width: 100%;
+  }
+}
+@media screen and (min-width:1200px) and (max-width:1300px){
+  .full__width{
+    width: 80%;
+    width: 84%;
+    width: calc(200% - 100%);
+  }
+  #not_visibile{
+    visibility: hidden;
+  }
+  .wrapper__images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+ 
+}
+@media screen and (min-width:1000px) and (max-width:1199px){
+  #not_visibile{
+    visibility: hidden;
+  }
+}
+@media screen and (min-width:900px) and (max-width:1000px){
+  #not_visibile{
+    visibility: hidden;
+  }
+}
+@media screen and (min-width:800px) and (max-width:900px){
+  #not_visibile{
+    visibility: hidden;
+  }
+}
+@media screen and (min-width:700px) and (max-width:800px){
+  #not_visibile{
+    visibility: hidden;
+  }
+}
+@media screen and (min-width:600px) and (max-width:700px){
+  #not_visibile{
+    visibility: hidden;
+  }
+}
+@media screen and (min-width:500px) and (max-width:600px){
+  #not_visibile{
+    visibility: hidden;
+  }
+}
+@media screen and (min-width:400px) and (max-width:500px){
+  #not_visibile{
+    visibility: hidden;
+  }
+  
+  .wrapper__all__general{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* background: #000; */
+    color: #000;
+  }
+  
+}
+@media screen and (min-width:300px) and (max-width:400px){
+  #not_visibile{
+    visibility: hidden;
+  }
+}
+@media screen and (min-width:1303px){
+  .wrapper__all__general{
+    width: calc(100% - 10%);
+  }
+  
+  
+}
+
+    </style>
+</head>
+<body>
+  <!-- component -->
+<div class="relative">
+  <button class="z-20 text-white flex flex-col shrink-0 grow-0 justify-around 
+                  fixed bottom-0 rounded-lg
+                  mr-1 mb-5 lg:mr-5 lg:mb-5 xl:mr-10 xl:mb-10">
+    <div class="p-3 rounded-full border-4 border-white bg-green-600">
+      <svg
+        class="w-10 h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+    </div>
+
+  </button>
+</div>
+
+<!-- component -->
+
+<div class="min-h-screen flex flex-row bg-gray-100" >
+  <div class="flex flex-col w-56 bg-white rounded-r-3xl overflow-hidden" id="not_visibile">
+    <div class="flex items-center justify-center h-20 shadow-md">
+      <h1 class="text-3xl uppercase text-indigo-500">داشبورد</h1>
+    </div>
+    <ul class="flex flex-col py-4">
+      <li>
+        <a href="index.html" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-home"></i></span>
+          <span class="text-sm font-medium">خانه</span>
+        </a>
+      </li>
+      <li>
+        <a href="login.html" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-music"></i></span>
+          <span class="text-sm font-medium">ورود</span>
+        </a>
+      </li>
+      <li>
+        <a href="signup.html" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-drink"></i></span>
+          <span class="text-sm font-medium">ثبت نام</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-shopping-bag"></i></span>
+          <span class="text-sm font-medium">درباره با ما</span>
+        </a>
+      </li>
+      <li>
+        <a href="contactus.html" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-chat"></i></span>
+          <span class="text-sm font-medium">تماس با ما</span>
+        </a>
+      </li>
+      <li>
+        <a href="filmNet/public/index.html" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-user"></i></span>
+          <span class="text-sm font-medium">پنل کاربری</span>
+        </a>
+      </li>
+      <li>
+        <a href="404.html" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-bell"></i></span>
+          <span class="text-sm font-medium">در دسترس نیست</span>
+          <span class="ml-auto mr-6 text-sm bg-red-100 rounded-full px-3 py-px text-red-500">5</span>
+        </a>
+      </li>
+        <label class="ui-switch">
+          <input onclick="myFunction()" type="checkbox">
+          <div class="slider">
+            <div class="circle"></div>
+          </div>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div class="wrapper__images">
+    <img class="full__width" src="images/shab.jpg" alt="shab">
+    <div class="wrapper__all__general">
+        <div class="img__ff">
+            <img class="zoom" src="images/cat4.jpg" alt="cat">
+            <h1>اختصاصی  </h1>
+        </div>
+        <div class="img__ff">
+            <img class="zoom"  src="images/cat5.jpg" alt="cat">
+            <h1>سینمای دیگر</h1>
+        </div>
+        <div class="img__ff">
+            <img class="zoom"  src="images/cat6.jpg" alt="cat">
+            <h1>دوبله اختصاصی</h1>
+        </div>
+        <div class="img__ff">
+            <img class="zoom"  src="images/cat7.jpg" alt="cat">
+            <h1>خانوادگی</h1>
+        </div>
+        <div class="img__ff">
+            <img class="zoom"  src="images/cat9.jpg" alt="cat">
+            <h1>ایرانی</h1>
+        </div>
+        <div class="img__ff">
+            <img class="zoom"  src="images/cat10.jpg" alt="cat">
+            <h1>جانوران</h1>
+        </div>
+        <div class="img__ff">
+            <img class="zoom"  src="images/cat11.jpg" alt="" loading="lazy">
+            <h1>ورزش</h1>
+       </div>
+        <div class="img__ff">
+            <img class="zoom"  src="images/cat13.jpg" alt="">
+            <h1>هندی</h1>
+      </div>
+        <div class="img__ff">
+            <img class="zoom"  src="images/cat12.jpg" alt="">
+            <h1>تاک شو</h1>
+           </div>
+    </div>
+</div>
+</div>
+
+<script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
+    <!-- created by codemaster team -->
+</body
+</html>
