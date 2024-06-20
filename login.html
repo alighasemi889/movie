@@ -1,116 +1,87 @@
-<!-- component -->
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>فحه ورود</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>صفحه  ورود</title>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
-        /* Webfont: Yekan */
-@font-face {
-	font-family: 'Yekan';
-	src:	url('Yekan.eot'); /* IE9 Compat Modes */
-	src:	url('Yekan.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-			url('Yekan.woff2') format('woff2'), /* Modern Browsers */
-			url('Yekan.woff') format('woff'), /* Modern Browsers */
-			url('Yekan.otf') format('opentype'), /* Open Type Font */	
-			url('Yekan.ttf') format('truetype'); /* Safari, Android, iOS */
-	font-weight: normal;
-	font-style: normal;
-	text-rendering: optimizeLegibility;
-	font-display: auto;
-}
         body{
-          background-image: url("images/bg__login.jpg");
-       
-        }   
-  img.logo.signup {
-    border-radius: 10px;
-    width: 100px;
-    height: auto;
-    max-width: 100%;
-}
-
-a:hover{
-    /* color:#fff; */
-    text-decoration: none;
-}
-@media screen and (max-width:416px){
-    .text-gray-700,.mr-2{
-        display: none;
-    }
-    .text-sm {
-  
-  line-height: 1.25rem;
-}
-}
+            background: url(images/bg__login.jpg);
+            max-width: 100%;
+        }
     </style>
 </head>
 <body>
-    <div class="bg-black-200 w-full min-h-screen flex items-center justify-center">
-            <div class="w-full py-8">
-                <div class="flex items-center justify-center space-x-2">
-                    <img src="images/logo reneww - Copy.jpg" alt="logo__signup" class="logo signup" loading="lazy">
-                </div>
-                <div class="bg-white w-5/6 md:w-3/4 lg:w-2/3 xl:w-[500px] 2xl:w-[550px] mt-8 mx-auto px-16 py-8 rounded-lg shadow-2xl">
-
-                    <h2 class="text-center text-2xl font-bold tracking-wide text-gray-800"> ثبت نام</h2>
-                    <p class="text-center text-sm text-gray-600 mt-2">ثبت نام نکردم؟ <a href="signup.html" class="text-blue-600 hover:text-blue-700 " title="Sign In">ثبت نام کنید</a></p>
-
-                    <form onsubmit ="return verifyPassword()"  id="basic_form" class="my-8 text-sm">
-                        <div class="flex flex-col my-4">
-                            <label for="name" class="text-gray-700">نام</label>
-                            <input id="basic_name" required type="text" name="name" id="name" class="mt-2 p-2 border border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-300 rounded text-sm text-gray-900" placeholder="Enter your name">
-                        </div>
-
-                        <div class="flex flex-col my-4">
-                            <label for="email" class="text-gray-700">ادرس ایمیل</label>
-                            <input  required type="email" name="email" id="basic_email" class="mt-2 p-2 border border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-300 rounded text-sm text-gray-900" placeholder="Enter your email">
-                        </div>
-                        
-                  
-
-                        <div class="flex items-center">
-                            <input required type="checkbox" name="remember_me" id="remember_me" class="mr-2 focus:ring-0 rounded">
-                            <label for="remember_me" class="text-gray-700">شرایط <a href="#" class="">و </a> ظوابط <a href="#" class=" ">امنیتی را میپذیرم</a></label>
-                        </div>
-                    
-                        <div class="my-4 flex items-center justify-end space-x-4">
-                            <button class="bg-blue-600 hover:bg-blue-700 rounded-lg px-8 py-2 text-gray-100 hover:shadow-xl transition duration-150 uppercase">ثبت نام</button>
-                        </div>
-                    </form>
-                    
-              
-                </div>
+    <body class="flex flex-wrap justify-center items-center">
+        <form class="my-10 p-5 w-72 md:w-96 bg-slate-200 rounded-lg flex flex-col items-center gap-4" id="user-form">
+           <div class="signup">
+            <a href="signup.html">ثبت نام نکرده ام؟</a>
+           </div>
+          <div class="flex flex-col gap-2">
+            <label class="text-slate-700">نام کاربری</label>
+            <input type="text" id="username" class="border-2 border-gray-300 rounded-lg px-3 py-2 w-60 focus:outline-none" required />
+          </div>
+         
+          <div class="flex flex-col gap-2">
+            <label class="text-slate-700">ایمیل</label>
+            <input type="email" id="email" class="border-2 border-gray-300 rounded-lg px-3 py-2 w-60 focus:outline-none" required />
+            <div id="email-error" class="hidden mt-2 text-red-800 text-xs">
+           ایمیل نامعتبر
             </div>
-        </div>
-        <script>
-        function verifyPassword() {  
-            var pw = document.getElementById("pswd").value;  
-            //check empty password field  
-            if(pw == "") {  
-               document.getElementById("message").innerHTML = "**Fill the password please!";  
-               return false;  
-            }  
-             
-           //minimum password length validation  
-            if(pw.length < 8) {  
-               document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";  
-               return false;  
-            }  
-            
-          //maximum length of password validation  
-            if(pw.length > 15) {  
-               document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";  
-               return false;  
-            } else {  
-               alert("Password is correct");  
-            }  
-          }  
-          </script>  
-   
+          </div> 
+          <!-- Dont use the below code😜💖 -->
+          <!-- <div class="flex flex-col gap-2">
+            <label class="text-slate-700">Phone</label>
+            <div class="relative">
+              <span class="absolute bottom-2.5 left-2 text-slate-500 font-bold">+91</span>
+              <input type="number" id="phone" class="border-2 border-gray-300 rounded-lg pl-10 py-2 w-60 focus:outline-none text-slate-800" required />
+            </div>
+            <div id="phone-error" class="hidden mt-2 text-red-800 text-xs">
+              شماره تماس باید بیشتر از 10 عدد باشد
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="text-slate-700">Password
+              <button class="px-3 py-2" id="password-view">
+                <i class="fa-solid fa-eye text-blue-600"></i></button></label>
+            <div>
+              <input type="password" id="password" class="border-2 border-gray-300 rounded-lg px-3 py-2 w-60 focus:outline-none" required />
+            </div>
+            <p id="letter" class="hidden text-red-800 text-xs"><b>حروف </b>کوچک </p>
+            <p id="capital" class="hidden text-red-800 text-xs">
+              یک<b>حروف (بزرگ)</b> 
+            </p>
+            <p id="number" class="hidden text-red-800 text-xs">یک <b>عدد</b></p>
+            <p id="length" class="hidden text-red-800 text-xs">
+              حداقل <b>10 کاراکتر</b>
+            </p>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="text-slate-700">Confirm Password
+              <button class="px-3 py-2" id="confirm-password-view">
+                <i class="fa-solid fa-eye text-blue-600"></i></button></label>
+      
+            <input type="password" id="confirm-password" class="border-2 border-gray-300 rounded-lg px-3 py-2 w-60 focus:outline-none" required />
+            <p id="confirm-letter" class="hidden text-red-800 text-xs">
+              یک <b>حروف</b> کوچک
+            </p>
+            <p id="confirm-capital" class="hidden text-red-800 text-xs">
+              یک<b>حروف (بزرگ)</b> 
+            </p>
+            <p id="confirm-number" class="hidden text-red-800 text-xs">یک<b>عدد</b></p>
+            <p id="confirm-length" class="hidden text-red-800 text-xs">
+              حداقل <b>8 کاراکتر</b>
+            </p>
+            <p id="confirm-password-checker" class="hidden text-red-800 text-xs">رمز شما همخوانی با هم ندارد</p>
+          </div> -->
+          <!-- finish above code 😜 -->
+          <div class="flex justify-center mt-5">
+            <input type="submit" value="ورود" class="px-4 py-2 rounded-lg border-2 border-violet-600 text-violet-600 cursor-pointer" />
+          </div>
+        </form>
+        <div id="data-container" class="self-start mt-10"></div>
+      </body>
+   <script src="js/validation.js"></script>
 </body>
 </html>
