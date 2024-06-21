@@ -1,7 +1,6 @@
 <h1 align="center" id="title">Movie_Centeral</h1>
 
 
-![movie_seres](https://github.com/alighasemi889/movie/assets/58810370/fa3b42c6-2c10-4863-ba47-ca2e99307567)
 
 
 
@@ -13,6 +12,8 @@
 [https://alighasemi889.github.io/movie/](https://alighasemi889.github.io/movie/)
 
 <h2>Project Screenshots:</h2>
+
+![movie_seres](https://github.com/alighasemi889/movie/assets/58810370/fa3b42c6-2c10-4863-ba47-ca2e99307567)
 
 
   
@@ -56,5 +57,5 @@ This project is licensed under the Code-master\_\_movie
 
 <h2>💖Like my work?</h2>
 
-If you have any question you can send a messsage to :alihj4223@gmail.com# movie
+If you have any question you can send a messsage to :alihj4223@gmail.com
  
