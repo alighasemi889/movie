@@ -1,16 +1,16 @@
 <h1 align="center" id="title">Movie_Centeral</h1>
 
 
+![movie_seres](https://github.com/alighasemi889/movie/assets/58810370/fa3b42c6-2c10-4863-ba47-ca2e99307567)
 
 
-![Uploading movie_seres.PNG…]()
 
 
 <p id="description">This is a movie project base on javascript and tailwind that I have created you can customize it very well</p>
 
 <h2>🚀 Demo</h2>
 
-[alighasemi889.github.io/movie/](alighasemi889.github.io/movie/)
+[https://alighasemi889.github.io/movie/](https://alighasemi889.github.io/movie/)
 
 <h2>Project Screenshots:</h2>
 
