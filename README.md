@@ -45,6 +45,7 @@ Its free to use it but you can change the languages and the main structure of th
 Technologies used in the project:
 
 *   Html5
+*   Javascript
 *   CSS3
 *   GSAP
 *   Tailwind
